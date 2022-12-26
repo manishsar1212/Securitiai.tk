@@ -28,6 +28,20 @@
  <link rel='stylesheet' type='text/css' href='https://cdn-prod.securiti.ai/consent/cookie-consent.css' />
 </head>
 <body class="slides chain simplifiedMobile animated">
+	<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer. -->
+<script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js';
+	s.setAttribute('data-tenant-uuid', 'f84be4f0-e65e-40d3-af64-f6f4ae7b602f');
+	s.setAttribute('data-domain-uuid', '8063dcfa-fabd-47a4-988d-24b02bcdfe1d');
+	s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+	s.addEventListener('load', function() { window.initCmp(); });
+})()
+</script>
 		
 <!-- SVG Library -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
